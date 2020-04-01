@@ -38,7 +38,7 @@ function SendText() {
     var content = document.getElementById("myText").value;
     connection.send("snare-send", content);
     console.log(content);
-    document.getElementById('myInput').value = '';
+    document.getElementById('myText').value = '';
     success_string = success_string.concat("!");
     document.getElementById('success').innerHTML = success_string;
 }
