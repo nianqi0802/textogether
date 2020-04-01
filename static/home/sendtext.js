@@ -32,11 +32,15 @@ connection.onOtherDisconnect((id, type) => {
     console.log(`OTHER DISCONNECTED: ${id}, ${type}`);
 });
 
+var success_string = "Secret Sent";
 
 function SendText() {
     var content = document.getElementById("myText").value;
     connection.send("snare-send", content);
     console.log(content);
+    document.getElementById('myInput').value = '';
+    success_string = success_string.concat("!");
+    document.getElementById('success').innerHTML = success_string;
 }
 
 
